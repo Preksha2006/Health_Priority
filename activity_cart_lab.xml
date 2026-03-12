@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CartLabActivity">
+
+    <TextView
+        android:id="@+id/textViewLTDD1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Health Priority"
+        android:textColor="@color/purple_dark"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Package Name -->
+
+    <!-- Deliver Location Label -->
+    <TextView
+        android:id="@+id/textViewCartPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/lab_test_and_packages"
+        android:textColor="@color/purple_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewLTDD1" />
+
+    <TextView
+        android:id="@+id/textViewLTDD3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deliver Location:Lonere"
+        android:textColor="@color/purple_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCartPackageName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        tools:layout_editor_absoluteY="144dp" />
+
+    <!-- ListView or placeholder (currently an EditText for demo) -->
+    <ListView
+        android:id="@+id/listViewCart"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:text="Hi! \nHello"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textViewLTDD3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Total Cost -->
+    <TextView
+        android:id="@+id/textViewCartTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total cost: ₹0"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/listViewCart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Select Date Label -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/select_date"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewCartTotalCost"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Select Time Label -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/select_time"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewCartTotalCost"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Date Picker Button -->
+    <Button
+        android:id="@+id/buttonCartDatePicker"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="48dp"
+        android:text="@string/_27_10_2025"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Time Picker Button -->
+    <Button
+        android:id="@+id/buttonCartTimePicker"
+        style="?android:spinnerStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/_10_00"
+        app:layout_constraintTop_toBottomOf="@id/textView3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Checkout Button -->
+    <Button
+        android:id="@+id/buttonCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="CHECKOUT"
+        android:textColor="@color/black"
+        android:background="@color/teal"
+        app:layout_constraintTop_toBottomOf="@id/buttonCartDatePicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/buttonCartBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/back1"
+        android:textColor="@color/black"
+        android:background="@color/teal"
+        app:layout_constraintTop_toBottomOf="@id/buttonCartTimePicker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
